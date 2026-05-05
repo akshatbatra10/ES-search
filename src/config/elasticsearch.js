@@ -1,7 +1,7 @@
 const { Client } = require('@elastic/elasticsearch');
 
 const esClient = new Client({
-  node: "http://localhost:9201"
+  node: process.env.ES_CLIENT_URL,
 });
 
 module.exports = esClient;
